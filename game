@@ -1,0 +1,23 @@
+import random
+possible_actions = ["rock", "paper", "scissors"]
+user_action = random.choice(possible_actions)
+user2_action = random.choice(possible_actions)
+print(f"\nPlayer1 chose {user_action}, player2 chose {user2_action}.\n")
+
+if user_action == user2_action:
+    print(f"Both players selected {user_action}. It's a tie!")
+elif user_action == "rock":
+    if user2_action == "scissors":
+        print("Rock smashes scissors! Player1 win!")
+    else:
+        print("Paper covers rock! Player2 win!")
+elif user_action == "paper":
+    if user2_action == "rock":
+        print("Paper covers rock! Player1 win!")
+    else:
+        print("Scissors cuts paper! Player2 win!")
+elif user_action == "scissors":
+    if user2_action == "paper":
+        print("Scissors cuts paper! Player1 win!")
+    else:
+        print("Rock smashes scissors! Player2 win!")
